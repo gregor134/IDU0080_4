@@ -18,7 +18,7 @@
       </xsd:element>
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="TellimuseEsitamine">
+  <wsdl:message name="Tellimus">
     <wsdl:part element="tns:MinuTellimus" name="parameters"/>
   </wsdl:message>
   <wsdl:message name="TellimuseVastus">
@@ -26,7 +26,7 @@
   </wsdl:message>
   <wsdl:portType name="bp">
     <wsdl:operation name="TellimuseEsitamine">
-      <wsdl:input message="tns:TellimuseEsitamine"/>
+      <wsdl:input message="tns:Tellimus"/>
       <wsdl:output message="tns:TellimuseVastus"/>
     </wsdl:operation>
   </wsdl:portType>
@@ -44,7 +44,7 @@
   </wsdl:binding>
   <wsdl:service name="bp">
     <wsdl:port binding="tns:bpSOAP" name="bpSOAP">
-      <soap:address location="http://localhost:8080/BP/services/bpSOAP"/>
+      <soap:address location="http://localhost:8085/BpService"/>
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>
