@@ -24,8 +24,6 @@ import javax.xml.ws.Action;
 import javax.xml.ws.RequestWrapper;
 import javax.xml.ws.ResponseWrapper;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
 import ttu.idu0080.order.server.model.Enterprise;
 import ttu.idu0080.order.server.model.EshopOrder;
 

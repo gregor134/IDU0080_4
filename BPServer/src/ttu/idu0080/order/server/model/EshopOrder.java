@@ -68,7 +68,7 @@ public class EshopOrder implements Serializable {
 		return this.customer;
 	}
 
-	public void setCustomerFk(Customer customerFk) {
+	public void setCustomerFk(Customer customer) {
 		this.customer = customer;
 	}
 
