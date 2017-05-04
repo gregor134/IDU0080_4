@@ -15,7 +15,7 @@ import java.sql.Timestamp;
 @Table(name="order_shipment")
 @NamedQueries({
 	@NamedQuery(name="OrderShipment.findAll", query="SELECT o FROM OrderShipment o"),
-	@NamedQuery(name="OrderShipment.findByIdAndRyhmName", query="SELECT o FROM OrderShipment o WHERE o.orderShipment = :shipment_id AND o.ryhmName LIKE :shipment_ryhmName")
+	@NamedQuery(name="OrderShipment.findByOrderIdAndRyhmName", query="SELECT o FROM OrderShipment o WHERE o.orderFk = :orderFk AND o.ryhmName LIKE :ryhmName")
 	})
 public class OrderShipment implements Serializable {
 	private static final long serialVersionUID = 1L;

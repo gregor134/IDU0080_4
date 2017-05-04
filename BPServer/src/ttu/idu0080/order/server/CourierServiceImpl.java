@@ -115,6 +115,7 @@ public class CourierServiceImpl implements CourierService {
 				courier.getAddresses().add(addressBuilder(address));
 			}
 			
+        	em.close();
 			factory.close();
         	
             return courier;
@@ -153,6 +154,7 @@ public class CourierServiceImpl implements CourierService {
     			couriers.add(c);
         	}
         	
+        	em.close();
         	factory.close();
         	
         	return couriers;

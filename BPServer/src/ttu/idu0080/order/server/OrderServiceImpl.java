@@ -137,6 +137,7 @@ public class OrderServiceImpl implements OrderService {
             	orders.add(order);
         	}
         	
+        	em.close();
 			factory.close();
         	
             return orders;
@@ -198,6 +199,7 @@ public class OrderServiceImpl implements OrderService {
         	address.setZipcode(eshopOrder.getShippingAddressFk().getZipcode());
         	order.setShippingAddress(address);
 
+        	em.close();
 			factory.close();
         	
             return order;
