@@ -57,7 +57,7 @@ public class OrderShipment {
     @XmlElement(name = "ryhm_name")
     protected String ryhmName;
     @XmlElement(name = "shipping_price")
-    protected double shippingPrice;
+    protected long shippingPrice;
     @XmlElement(name = "tracking_number")
     protected String trackingNumber;
 
@@ -169,7 +169,7 @@ public class OrderShipment {
      * Gets the value of the shippingPrice property.
      * 
      */
-    public double getShippingPrice() {
+    public long getShippingPrice() {
         return shippingPrice;
     }
 
@@ -177,7 +177,7 @@ public class OrderShipment {
      * Sets the value of the shippingPrice property.
      * 
      */
-    public void setShippingPrice(double value) {
+    public void setShippingPrice(long value) {
         this.shippingPrice = value;
     }
 

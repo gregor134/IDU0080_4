@@ -24,7 +24,11 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _GetOrdersByOrderIdResponse_QNAME = new QName("http://server.order.idu0080.ttu/", "getOrdersByOrderIdResponse");
+    private final static QName _InsertOrderShipmentResponse_QNAME = new QName("http://server.order.idu0080.ttu/", "insertOrderShipmentResponse");
+	private final static QName _GetOrderShipmentsByOrderIdRyhmName_QNAME = new QName("http://server.order.idu0080.ttu/", "getOrderShipmentsByOrderIdRyhmName");
+	private final static QName _InsertOrderShipment_QNAME = new QName("http://server.order.idu0080.ttu/", "insertOrderShipment");
+	private final static QName _GetOrderShipmentsByOrderIdRyhmNameResponse_QNAME = new QName("http://server.order.idu0080.ttu/", "getOrderShipmentsByOrderIdRyhmNameResponse");
+	private final static QName _GetOrdersByOrderIdResponse_QNAME = new QName("http://server.order.idu0080.ttu/", "getOrdersByOrderIdResponse");
     private final static QName _GetAllOrders_QNAME = new QName("http://server.order.idu0080.ttu/", "getAllOrders");
     private final static QName _GetAllOrdersResponse_QNAME = new QName("http://server.order.idu0080.ttu/", "getAllOrdersResponse");
     private final static QName _GetOrdersByCustomerLastNameResponse_QNAME = new QName("http://server.order.idu0080.ttu/", "getOrdersByCustomerLastNameResponse");
@@ -43,6 +47,82 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GetOrderShipmentsByOrderIdRyhmNameResponse }
+     * 
+     */
+    public GetOrderShipmentsByOrderIdRyhmNameResponse createGetOrderShipmentsByOrderIdRyhmNameResponse() {
+        return new GetOrderShipmentsByOrderIdRyhmNameResponse();
+    }
+
+	/**
+     * Create an instance of {@link GetOrderShipmentsByOrderIdRyhmName }
+     * 
+     */
+    public GetOrderShipmentsByOrderIdRyhmName createGetOrderShipmentsByOrderIdRyhmName() {
+        return new GetOrderShipmentsByOrderIdRyhmName();
+    }
+
+	/**
+     * Create an instance of {@link InsertOrderShipment }
+     * 
+     */
+    public InsertOrderShipment createInsertOrderShipment() {
+        return new InsertOrderShipment();
+    }
+
+	/**
+     * Create an instance of {@link InsertOrderShipmentResponse }
+     * 
+     */
+    public InsertOrderShipmentResponse createInsertOrderShipmentResponse() {
+        return new InsertOrderShipmentResponse();
+    }
+
+	/**
+     * Create an instance of {@link OrderShipment }
+     * 
+     */
+    public OrderShipment createOrderShipment() {
+        return new OrderShipment();
+    }
+
+	/**
+     * Create an instance of {@link JAXBElement }{@code <}{@link InsertOrderShipmentResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://server.order.idu0080.ttu/", name = "insertOrderShipmentResponse")
+    public JAXBElement<InsertOrderShipmentResponse> createInsertOrderShipmentResponse(InsertOrderShipmentResponse value) {
+        return new JAXBElement<InsertOrderShipmentResponse>(_InsertOrderShipmentResponse_QNAME, InsertOrderShipmentResponse.class, null, value);
+    }
+
+	/**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetOrderShipmentsByOrderIdRyhmName }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://server.order.idu0080.ttu/", name = "getOrderShipmentsByOrderIdRyhmName")
+    public JAXBElement<GetOrderShipmentsByOrderIdRyhmName> createGetOrderShipmentsByOrderIdRyhmName(GetOrderShipmentsByOrderIdRyhmName value) {
+        return new JAXBElement<GetOrderShipmentsByOrderIdRyhmName>(_GetOrderShipmentsByOrderIdRyhmName_QNAME, GetOrderShipmentsByOrderIdRyhmName.class, null, value);
+    }
+
+	/**
+     * Create an instance of {@link JAXBElement }{@code <}{@link InsertOrderShipment }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://server.order.idu0080.ttu/", name = "insertOrderShipment")
+    public JAXBElement<InsertOrderShipment> createInsertOrderShipment(InsertOrderShipment value) {
+        return new JAXBElement<InsertOrderShipment>(_InsertOrderShipment_QNAME, InsertOrderShipment.class, null, value);
+    }
+
+	/**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetOrderShipmentsByOrderIdRyhmNameResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://server.order.idu0080.ttu/", name = "getOrderShipmentsByOrderIdRyhmNameResponse")
+    public JAXBElement<GetOrderShipmentsByOrderIdRyhmNameResponse> createGetOrderShipmentsByOrderIdRyhmNameResponse(GetOrderShipmentsByOrderIdRyhmNameResponse value) {
+        return new JAXBElement<GetOrderShipmentsByOrderIdRyhmNameResponse>(_GetOrderShipmentsByOrderIdRyhmNameResponse_QNAME, GetOrderShipmentsByOrderIdRyhmNameResponse.class, null, value);
+    }
+
+	/**
      * Create an instance of {@link GetOrdersByShippingAddressResponse }
      * 
      */
@@ -174,7 +254,7 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link GetOrdersByOrderIdResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://server.order.idu0080.ttu/", name = "getOrdersByOrderIdResponse")
+//    @XmlElementDecl(namespace = "http://server.order.idu0080.ttu/", name = "getOrdersByOrderIdResponse")
     public JAXBElement<GetOrdersByOrderIdResponse> createGetOrdersByOrderIdResponse(GetOrdersByOrderIdResponse value) {
         return new JAXBElement<GetOrdersByOrderIdResponse>(_GetOrdersByOrderIdResponse_QNAME, GetOrdersByOrderIdResponse.class, null, value);
     }
@@ -183,7 +263,7 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link GetAllOrders }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://server.order.idu0080.ttu/", name = "getAllOrders")
+//    @XmlElementDecl(namespace = "http://server.order.idu0080.ttu/", name = "getAllOrders")
     public JAXBElement<GetAllOrders> createGetAllOrders(GetAllOrders value) {
         return new JAXBElement<GetAllOrders>(_GetAllOrders_QNAME, GetAllOrders.class, null, value);
     }
@@ -192,7 +272,7 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link GetAllOrdersResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://server.order.idu0080.ttu/", name = "getAllOrdersResponse")
+//    @XmlElementDecl(namespace = "http://server.order.idu0080.ttu/", name = "getAllOrdersResponse")
     public JAXBElement<GetAllOrdersResponse> createGetAllOrdersResponse(GetAllOrdersResponse value) {
         return new JAXBElement<GetAllOrdersResponse>(_GetAllOrdersResponse_QNAME, GetAllOrdersResponse.class, null, value);
     }
@@ -201,7 +281,7 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link GetOrdersByCustomerLastNameResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://server.order.idu0080.ttu/", name = "getOrdersByCustomerLastNameResponse")
+//    @XmlElementDecl(namespace = "http://server.order.idu0080.ttu/", name = "getOrdersByCustomerLastNameResponse")
     public JAXBElement<GetOrdersByCustomerLastNameResponse> createGetOrdersByCustomerLastNameResponse(GetOrdersByCustomerLastNameResponse value) {
         return new JAXBElement<GetOrdersByCustomerLastNameResponse>(_GetOrdersByCustomerLastNameResponse_QNAME, GetOrdersByCustomerLastNameResponse.class, null, value);
     }
@@ -210,7 +290,7 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link GetOrdersByShippingAddressResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://server.order.idu0080.ttu/", name = "getOrdersByShippingAddressResponse")
+//    @XmlElementDecl(namespace = "http://server.order.idu0080.ttu/", name = "getOrdersByShippingAddressResponse")
     public JAXBElement<GetOrdersByShippingAddressResponse> createGetOrdersByShippingAddressResponse(GetOrdersByShippingAddressResponse value) {
         return new JAXBElement<GetOrdersByShippingAddressResponse>(_GetOrdersByShippingAddressResponse_QNAME, GetOrdersByShippingAddressResponse.class, null, value);
     }
@@ -219,7 +299,7 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link GetOrdersByShippingAddress }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://server.order.idu0080.ttu/", name = "getOrdersByShippingAddress")
+//    @XmlElementDecl(namespace = "http://server.order.idu0080.ttu/", name = "getOrdersByShippingAddress")
     public JAXBElement<GetOrdersByShippingAddress> createGetOrdersByShippingAddress(GetOrdersByShippingAddress value) {
         return new JAXBElement<GetOrdersByShippingAddress>(_GetOrdersByShippingAddress_QNAME, GetOrdersByShippingAddress.class, null, value);
     }
@@ -228,7 +308,7 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link GetOrdersByCustomerId }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://server.order.idu0080.ttu/", name = "getOrdersByCustomerId")
+//    @XmlElementDecl(namespace = "http://server.order.idu0080.ttu/", name = "getOrdersByCustomerId")
     public JAXBElement<GetOrdersByCustomerId> createGetOrdersByCustomerId(GetOrdersByCustomerId value) {
         return new JAXBElement<GetOrdersByCustomerId>(_GetOrdersByCustomerId_QNAME, GetOrdersByCustomerId.class, null, value);
     }
@@ -237,7 +317,7 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link GetOrdersByCustomerIdResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://server.order.idu0080.ttu/", name = "getOrdersByCustomerIdResponse")
+//    @XmlElementDecl(namespace = "http://server.order.idu0080.ttu/", name = "getOrdersByCustomerIdResponse")
     public JAXBElement<GetOrdersByCustomerIdResponse> createGetOrdersByCustomerIdResponse(GetOrdersByCustomerIdResponse value) {
         return new JAXBElement<GetOrdersByCustomerIdResponse>(_GetOrdersByCustomerIdResponse_QNAME, GetOrdersByCustomerIdResponse.class, null, value);
     }
@@ -246,7 +326,7 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link GetOrdersByCustomerLastName }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://server.order.idu0080.ttu/", name = "getOrdersByCustomerLastName")
+//    @XmlElementDecl(namespace = "http://server.order.idu0080.ttu/", name = "getOrdersByCustomerLastName")
     public JAXBElement<GetOrdersByCustomerLastName> createGetOrdersByCustomerLastName(GetOrdersByCustomerLastName value) {
         return new JAXBElement<GetOrdersByCustomerLastName>(_GetOrdersByCustomerLastName_QNAME, GetOrdersByCustomerLastName.class, null, value);
     }
@@ -255,7 +335,7 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link GetOrdersByOrderId }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://server.order.idu0080.ttu/", name = "getOrdersByOrderId")
+//    @XmlElementDecl(namespace = "http://server.order.idu0080.ttu/", name = "getOrdersByOrderId")
     public JAXBElement<GetOrdersByOrderId> createGetOrdersByOrderId(GetOrdersByOrderId value) {
         return new JAXBElement<GetOrdersByOrderId>(_GetOrdersByOrderId_QNAME, GetOrdersByOrderId.class, null, value);
     }

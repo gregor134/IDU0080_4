@@ -39,7 +39,7 @@ import javax.xml.bind.annotation.XmlType;
 public class Seller {
 
     @XmlElement(nillable = true)
-    protected List<EntAddress> addresses;
+    public List<EntAddress> addresses;
     protected int enterprise;
     protected String name;
 

@@ -7,26 +7,18 @@
 package ttu.idu0080.order.server;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.logging.Logger;
-import javax.jws.WebMethod;
-import javax.jws.WebParam;
-import javax.jws.WebResult;
-import javax.jws.WebService;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
-import javax.xml.ws.Action;
-import javax.xml.ws.RequestWrapper;
-import javax.xml.ws.ResponseWrapper;
 
-import ttu.idu0080.order.server.model.Enterprise;
 import ttu.idu0080.order.server.model.OrderShipment;
 
 /**
@@ -77,7 +69,7 @@ public class OrderShipmentServiceImpl implements OrderShipmentService {
         		newOs.setOrder(os.getOrderFk().intValue());
         		newOs.setOrderShipment((int) os.getOrderShipment());
         		newOs.setRyhmName(os.getRyhmName());
-        		newOs.setShippingPrice(os.getShippingPrice().longValue());
+        		newOs.setShippingPrice(os.getShippingPrice().setScale(2, RoundingMode.HALF_EVEN).longValue());
         		newOs.setTrackingNumber(os.getTrackingNumber());
         		
         		newOrderShipments.add(newOs);
@@ -123,7 +115,8 @@ public class OrderShipmentServiceImpl implements OrderShipmentService {
 			
 			em.close();
 			factory.close();
-            return 1;
+			
+			return (int) orderShipment.getOrderShipment();
         } catch (java.lang.Exception ex) {
             ex.printStackTrace();
             throw new RuntimeException(ex);
